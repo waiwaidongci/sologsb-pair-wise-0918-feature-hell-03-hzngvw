@@ -18,7 +18,8 @@ body {
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
 }
 
@@ -165,12 +166,157 @@ label span {
   font-size: 13px;
 }
 
-input {
+input,
+select {
   width: 100%;
   min-height: 42px;
   border-radius: 7px;
   border: 1px solid var(--border);
   padding: 0 12px;
+  background: #ffffff;
+}
+
+.notice {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.notice.success {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #065f46;
+}
+
+.notice.error {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #991b1b;
+}
+
+.notice.info {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1e40af;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.badge.open {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge.closed {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.badge.expired {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge.ready {
+  background: #ccfbf1;
+  color: #0f766e;
+}
+
+.cyl-list {
+  display: grid;
+  gap: 10px;
+}
+
+.cyl-item {
+  display: grid;
+  gap: 6px;
+  padding: 12px 14px;
+  text-align: left;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fbfdff;
+}
+
+.cyl-item.active {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 25%, transparent);
+}
+
+.cyl-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cyl-item small {
+  color: #64748b;
+}
+
+.orders {
+  display: grid;
+  gap: 14px;
+}
+
+.order-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fbfdff;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.order-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.order-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  color: #526071;
+  font-size: 14px;
+}
+
+.receipt-form {
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  gap: 12px;
+  align-items: end;
+}
+
+.queue-rows article {
+  grid-template-columns: 54px 1fr auto;
+  align-items: center;
+}
+
+.chips .chip-active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
+.empty {
+  color: #64748b;
+  margin: 0;
+}
+
+.sub {
+  color: #526071;
+  margin-top: -8px;
 }
 
 .records {
@@ -211,7 +357,8 @@ input {
 @media (max-width: 860px) {
   .metrics,
   .workspace,
-  .field-grid {
+  .field-grid,
+  .receipt-form {
     grid-template-columns: 1fr;
   }
 
