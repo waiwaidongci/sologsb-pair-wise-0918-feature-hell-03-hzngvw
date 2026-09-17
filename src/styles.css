@@ -18,7 +18,8 @@ body {
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
 }
 
@@ -81,7 +82,7 @@ button {
 
 .metrics {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 14px;
   margin: 18px 0;
 }
@@ -165,12 +166,14 @@ label span {
   font-size: 13px;
 }
 
-input {
+input,
+select {
   width: 100%;
   min-height: 42px;
   border-radius: 7px;
   border: 1px solid var(--border);
   padding: 0 12px;
+  background: #ffffff;
 }
 
 .records {
@@ -206,6 +209,127 @@ input {
   margin: 0;
   color: #526071;
   line-height: 1.6;
+}
+
+.chips button.chip-active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
+.unit {
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.tag-ok {
+  background: color-mix(in srgb, var(--secondary) 14%, #ffffff);
+  color: #0f766e;
+}
+
+.tag-warn {
+  background: color-mix(in srgb, var(--accent) 18%, #ffffff);
+  color: #b45309;
+}
+
+.tag-danger {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.error {
+  margin: 12px 0 0;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.info {
+  margin: 12px 0 0;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.empty {
+  margin: 0;
+  color: #94a3b8;
+}
+
+.mix-hint {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px dashed color-mix(in srgb, var(--secondary) 55%, var(--border));
+  background: color-mix(in srgb, var(--secondary) 7%, #ffffff);
+  color: #0f766e;
+  line-height: 1.7;
+}
+
+.notice {
+  padding: 12px 14px;
+  border-radius: 8px;
+  line-height: 1.7;
+}
+
+.notice-warn {
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--border));
+  background: color-mix(in srgb, var(--accent) 10%, #ffffff);
+  color: #92400e;
+}
+
+.block-btn {
+  width: 100%;
+  margin-top: 14px;
+}
+
+.tank-list {
+  display: grid;
+  gap: 8px;
+}
+
+.tank-item {
+  display: grid;
+  gap: 2px;
+  justify-items: start;
+  padding: 10px 12px;
+  text-align: left;
+  min-height: 0;
+}
+
+.tank-item span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.tank-item.tank-active {
+  border-color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 8%, #ffffff);
+}
+
+.sign-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-top: 10px;
+  max-width: 420px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 @media (max-width: 860px) {
